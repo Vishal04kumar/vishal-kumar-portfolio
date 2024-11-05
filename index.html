@@ -11,77 +11,97 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #4a90e2;
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
-            border: 5px solid white;
+            border: 4px solid white;
             object-fit: cover;
         }
         header h1 {
             margin: 10px 0;
             font-size: 2.5em;
+            font-weight: bold;
         }
         header p {
             font-size: 1.2em;
         }
         section {
             padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .intro {
             text-align: center;
+            margin-bottom: 40px;
         }
         .intro h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             color: #333;
         }
         .intro p {
             font-size: 1.2em;
             color: #555;
         }
-        .projects, .skills, .education, .certifications {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 40px;
-        }
         .section-title {
-            font-size: 1.8em;
-            color: #333;
+            font-size: 2em;
+            color: #4a90e2;
             margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .projects, .skills, .education, .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
         }
         .project-item, .skill-item, .education-item, .certification-item {
             background-color: white;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .project-item:hover, .skill-item:hover, .education-item:hover, .certification-item:hover {
+            transform: scale(1.05);
         }
         .project-item h3, .skill-item h3, .education-item h3, .certification-item h3 {
             color: #333;
-            margin: 0;
+            font-size: 1.4em;
+            margin-bottom: 10px;
         }
         .project-item p, .skill-item p, .education-item p, .certification-item p {
             color: #666;
+            line-height: 1.6;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p, footer a {
+            font-size: 1em;
+            color: white;
+            margin: 5px;
+        }
+        footer a:hover {
+            color: #4a90e2;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -103,17 +123,17 @@
 
         <div class="project-item">
             <h3>AI-Based Infectious Disease Diagnosis</h3>
-            <p>Developed a research paper focusing on AI techniques for detecting and diagnosing infectious diseases. The project improves early detection and intervention, contributing to more efficient healthcare solutions.</p>
+            <p>Developed a research paper focusing on AI techniques for detecting and diagnosing infectious diseases. This project contributes to efficient healthcare solutions by enabling early detection.</p>
         </div>
 
         <div class="project-item">
             <h3>IoT Health Monitoring Wearable Device</h3>
-            <p>Created an IoT-based wearable device to continuously monitor vital health signs such as heart rate and body temperature. It connects to a mobile app to provide real-time health data and alerts.</p>
+            <p>Created a wearable IoT device to monitor vital health signs like heart rate and temperature. It provides real-time health data and alerts through a connected mobile app.</p>
         </div>
 
         <div class="project-item">
             <h3>Distracted Driver Detection System</h3>
-            <p>Designed a distracted driver detection system using machine learning and video analysis to monitor driver behavior and provide alerts, helping to prevent accidents and improve road safety.</p>
+            <p>Developed a system to detect driver distraction using ML and video analysis, providing real-time alerts to enhance road safety.</p>
         </div>
     </section>
 
@@ -189,8 +209,8 @@
     </section>
 
     <footer>
-        <p>Contact me: <a href="mailto:vishal7889062265@gmail.com" style="color:white;">vishal7889062265@gmail.com</a> | +91 9464945762</p>
-        <p><a href="https://www.linkedin.com/in/vishal-kumar-272696251/" style="color:white;">LinkedIn Profile</a></p>
+        <p>Contact me: <a href="mailto:vishal7889062265@gmail.com">vishal7889062265@gmail.com</a> | +91 9464945762</p>
+        <p><a href="https://www.linkedin.com/in/vishal-kumar-272696251/">LinkedIn Profile</a></p>
     </footer>
 
 </body>
